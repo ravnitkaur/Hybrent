@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="6" total="7" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="47227" started-at="2017-12-29T11:06:31Z" finished-at="2017-12-29T11:07:18Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="47227" started-at="2017-12-29T11:06:31Z" finished-at="2017-12-29T11:07:18Z">
+      <class name="testCases.testCases">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:testCases.testCases@72d818d1]" name="startReport" is-config="true" duration-ms="468" started-at="2017-12-29T16:36:31Z" finished-at="2017-12-29T16:36:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method status="PASS" signature="Tc_Shop_2_3()[pri:0, instance:testCases.testCases@72d818d1]" name="Tc_Shop_2_3" duration-ms="46446" started-at="2017-12-29T16:36:31Z" finished-at="2017-12-29T16:37:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tc_Shop_2_3 -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:testCases.testCases@72d818d1]" name="endReport" is-config="true" duration-ms="297" started-at="2017-12-29T16:37:18Z" finished-at="2017-12-29T16:37:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- testCases.testCases -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -68,10 +68,10 @@ public class genericKeywords extends Common
 	public static int temp = 1;
 	public static String testStatus = "";
 	public static int testCaseDataRow;
-	public static int testLoadWaitTime = 60;
-	public static int elementLoadWaitTime = 60;
-	public static int implicitlyWaitTime = 120;
-	public static int pageLoadWaitTime = 60;
+	public static int testLoadWaitTime = 40;
+	public static int elementLoadWaitTime = 40;
+	public static int implicitlyWaitTime = 40;
+	public static int pageLoadWaitTime = 40;
 	public static final ArrayList<String> testCaseNames = new ArrayList();
 	public static boolean windowreadyStateStatus = true;
 
@@ -883,7 +883,7 @@ public class genericKeywords extends Common
 		try
 		{	
 			webElement.click();
-//System.out.println("Click on :" + locatorDescription);
+			//System.out.println("Click on :" + locatorDescription);
 			ApplicationKeyword.testLogPass(  "Click on :" + locatorDescription);
 		}
 		catch (InvalidSelectorException e)
@@ -917,48 +917,48 @@ public class genericKeywords extends Common
 
 
 	}
-	
-//	public static void clickOn(String objLocator, boolean checkVisibilityInWait)
-//	{
-//		waitForElementToDisplay(objLocator, elementLoadWaitTime, checkVisibilityInWait);
-//
-//		try
-//		{
-//			webElement.click();
-//
-//			ApplicationKeyword.testLogPass(  "Click on :" + locatorDescription);
-//		}
-//		catch (InvalidSelectorException e)
-//		{
-//			waitTime(1L);
-//		}
-//		catch (StaleElementReferenceException e)
-//		{
-//			waitTime(1L);
-//		}
-//		catch (ElementNotVisibleException e)
-//		{
-//			waitTime(1L);
-//		}
-//		catch (UnreachableBrowserException e)
-//		{
-//			ApplicationKeyword.testLogFail(e.toString());
-//		}
-//		catch (UnhandledAlertException e)
-//		{
-//			waitTime(1L);
-//		}
-//		catch (WebDriverException e)
-//		{
-//			waitTime(1L);
-//		}
-//		catch (Exception e)
-//		{
-//			ApplicationKeyword.testLogFail("Exception Error '" + e.toString() + "'");
-//		}
-//
-//
-//	}
+
+	//	public static void clickOn(String objLocator, boolean checkVisibilityInWait)
+	//	{
+	//		waitForElementToDisplay(objLocator, elementLoadWaitTime, checkVisibilityInWait);
+	//
+	//		try
+	//		{
+	//			webElement.click();
+	//
+	//			ApplicationKeyword.testLogPass(  "Click on :" + locatorDescription);
+	//		}
+	//		catch (InvalidSelectorException e)
+	//		{
+	//			waitTime(1L);
+	//		}
+	//		catch (StaleElementReferenceException e)
+	//		{
+	//			waitTime(1L);
+	//		}
+	//		catch (ElementNotVisibleException e)
+	//		{
+	//			waitTime(1L);
+	//		}
+	//		catch (UnreachableBrowserException e)
+	//		{
+	//			ApplicationKeyword.testLogFail(e.toString());
+	//		}
+	//		catch (UnhandledAlertException e)
+	//		{
+	//			waitTime(1L);
+	//		}
+	//		catch (WebDriverException e)
+	//		{
+	//			waitTime(1L);
+	//		}
+	//		catch (Exception e)
+	//		{
+	//			ApplicationKeyword.testLogFail("Exception Error '" + e.toString() + "'");
+	//		}
+	//
+	//
+	//	}
 
 	/* public static void switchToWindow(String objTitle)
   {
@@ -1193,13 +1193,13 @@ public class genericKeywords extends Common
 			return true;
 		}
 		catch(NoSuchElementException e){
-			
+
 		}
 		finally
 		{
 			driver.manage().timeouts().implicitlyWait(implicitlyWaitTime,TimeUnit.SECONDS);
 		}
-		
+
 		return false;
 	}
 
@@ -1837,82 +1837,82 @@ public class genericKeywords extends Common
     }
   } */
 
-//	public static void waitForElementToDisplay(String objLocator, int timeout, boolean checkVisibility)
-//	{
-//		boolean webElementStatus = false;
-//		try {
-//			driver.manage().timeouts().implicitlyWait(0L, TimeUnit.SECONDS);
-//
-//			for (int i = 1; i <= timeout; i++)
-//			{
-//				try
-//				{
-//					if (!webElementStatus)
-//					{
-//
-//						findWebElement(objLocator);
-//						webElementStatus = true;
-//						checkPageIsReady();
-//						
-//						if(!checkVisibility)
-//							break;
-//					}
-//					
-//					if (webElement.isDisplayed())
-//					{
-//						break;
-//					}
-//
-//					waitTime(1L);
-//				}
-//				catch (InvalidSelectorException e)
-//				{
-//					waitTime(1L);
-//				}
-//				catch (StaleElementReferenceException e)
-//				{
-//					waitTime(1L);
-//				}
-//				catch (NoSuchElementException e)
-//				{
-//					waitTime(1L);
-//				}
-//				catch (ElementNotVisibleException e) {
-//					waitTime(1L);
-//				}
-//				catch (UnreachableBrowserException e)
-//				{
-//					testLogFail(e.toString());
-//				}
-//				catch (WebDriverException e) {
-//					waitTime(1L);
-//				}
-//
-//				if (i == timeout)
-//				{
-//					if (webElementStatus)
-//					{
-//						testLogFail(locatorDescription + " element is present but its not in clickable/editable state within '" + timeout + "' timeout");
-//					}
-//					else
-//					{
-//						testLogFail(locatorDescription + " element not found in '" + timeout + "' seconds timeout ");
-//					}
-//				}
-//			}
-//		}
-//		catch (Exception e)
-//		{
-//			testLogFail("Exception error '" + e.toString() + "'");
-//		}
-//		finally
-//		{
-//			webElementStatus = false;
-//
-//			driver.manage().timeouts().implicitlyWait(implicitlyWaitTime, TimeUnit.SECONDS);
-//		}
-//	}
-	
+	//	public static void waitForElementToDisplay(String objLocator, int timeout, boolean checkVisibility)
+	//	{
+	//		boolean webElementStatus = false;
+	//		try {
+	//			driver.manage().timeouts().implicitlyWait(0L, TimeUnit.SECONDS);
+	//
+	//			for (int i = 1; i <= timeout; i++)
+	//			{
+	//				try
+	//				{
+	//					if (!webElementStatus)
+	//					{
+	//
+	//						findWebElement(objLocator);
+	//						webElementStatus = true;
+	//						checkPageIsReady();
+	//						
+	//						if(!checkVisibility)
+	//							break;
+	//					}
+	//					
+	//					if (webElement.isDisplayed())
+	//					{
+	//						break;
+	//					}
+	//
+	//					waitTime(1L);
+	//				}
+	//				catch (InvalidSelectorException e)
+	//				{
+	//					waitTime(1L);
+	//				}
+	//				catch (StaleElementReferenceException e)
+	//				{
+	//					waitTime(1L);
+	//				}
+	//				catch (NoSuchElementException e)
+	//				{
+	//					waitTime(1L);
+	//				}
+	//				catch (ElementNotVisibleException e) {
+	//					waitTime(1L);
+	//				}
+	//				catch (UnreachableBrowserException e)
+	//				{
+	//					testLogFail(e.toString());
+	//				}
+	//				catch (WebDriverException e) {
+	//					waitTime(1L);
+	//				}
+	//
+	//				if (i == timeout)
+	//				{
+	//					if (webElementStatus)
+	//					{
+	//						testLogFail(locatorDescription + " element is present but its not in clickable/editable state within '" + timeout + "' timeout");
+	//					}
+	//					else
+	//					{
+	//						testLogFail(locatorDescription + " element not found in '" + timeout + "' seconds timeout ");
+	//					}
+	//				}
+	//			}
+	//		}
+	//		catch (Exception e)
+	//		{
+	//			testLogFail("Exception error '" + e.toString() + "'");
+	//		}
+	//		finally
+	//		{
+	//			webElementStatus = false;
+	//
+	//			driver.manage().timeouts().implicitlyWait(implicitlyWaitTime, TimeUnit.SECONDS);
+	//		}
+	//	}
+
 	public static void waitForElementToDisplay(String objLocator, int timeout)
 	{
 		boolean webElementStatus = false;
@@ -1984,6 +1984,78 @@ public class genericKeywords extends Common
 			driver.manage().timeouts().implicitlyWait(implicitlyWaitTime, TimeUnit.SECONDS);
 		}
 	}
+
+	//Had to create overload because 'checkPageIsReady' is important in some scnearios
+	//Existing method neither waits nor calls this methos
+	//waitForElement method also does not call this method
+	public static boolean isElementDisplayed(String objLocator, int timeout)
+	{
+		boolean webElementStatus = false;
+		try {
+			driver.manage().timeouts().implicitlyWait(0L, TimeUnit.SECONDS);
+
+			for (int i = 1; i <= timeout; i++)
+			{
+				try
+				{
+					if (!webElementStatus)
+					{
+						findWebElement(objLocator);
+						webElementStatus = true;
+						checkPageIsReady();
+					}
+					if (webElement.isDisplayed())
+					{
+						//System.out.println(locatorDescription + " is displayed");
+						break;
+					}
+
+					waitTime(1L);
+				}
+				catch (InvalidSelectorException e)
+				{
+					waitTime(1L);
+				}
+				catch (StaleElementReferenceException e)
+				{
+					waitTime(1L);
+				}
+				catch (NoSuchElementException e)
+				{
+					waitTime(1L);
+				}
+				catch (ElementNotVisibleException e) {
+					waitTime(1L);
+				}
+				catch (UnreachableBrowserException e)
+				{
+					testLogFail(e.toString());
+				}
+				catch (WebDriverException e) {
+					waitTime(1L);
+				}
+
+				if (i == timeout)
+				{
+					return false;
+				}
+			}
+		}
+		catch (Exception e)
+		{
+			testLogFail("Exception error '" + e.toString() + "'");
+		}
+		finally
+		{
+			webElementStatus = false;
+
+			driver.manage().timeouts().implicitlyWait(implicitlyWaitTime, TimeUnit.SECONDS);
+		}
+
+		return true;
+	}
+
+
 
 	public static void clickOnSpecialElement(String objectLocator)
 	{

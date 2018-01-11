@@ -216,7 +216,20 @@ import com.relevantcodes.extentreports.ExtentReports;
 		closeBrowser();
 	}
 	
-	
+	@Test
+	public void Tc_Receive_21() 
+	{
+		testStarts("Tc_Receive_10()", "Verify that user gets redirected to PO detail page on clicking PO number.");
+		LoginPage.OpenBrowserAndLogin();
+		ReceivePageObject.pageLinkandwait();
+		String firstPoNum=getText(OR.Receive_firstPONum);
+		System.out.println(firstPoNum);
+		clickOn(OR.Receive_firstPONum);
+		String s=getText(OR.Receive_firstPOHeadingText);
+		System.out.println(s);
+		
+		closeBrowser();
+	}
 	
 	@AfterTest
 	public void endReport(){

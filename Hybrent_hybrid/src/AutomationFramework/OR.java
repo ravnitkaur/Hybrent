@@ -522,7 +522,7 @@ public class OR {
 	public static String Receive_firstPONum="firstPONum#xpath=(//*[@class='table']//a[@class='ng-binding'])[1]";
 	public static String Receive_PrintItems="PrintItems#xpath=(//*[@ng-click='downloadPdf(order)']";
 	public static String Receive_PrintitemsText="PrintitemsText#xpath=(*//[@class='headtext']/span[1])";
-
+	public static String Receive_firstPOHeadingText="firstPOHeadingText#xpath=(//*[class='pagehead ng-binding'])[1]";
 
 }
 

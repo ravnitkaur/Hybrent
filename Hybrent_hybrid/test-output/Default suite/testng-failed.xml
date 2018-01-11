@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testCases.requestService">
+      <class name="testCases.users">
         <methods>
           <include name="endReport"/>
           <include name="startReport"/>
-          <include name="Tc_SPO_01"/>
+          <include name="Tc_Users_09"/>
         </methods>
-      </class> <!-- testCases.requestService -->
+      </class> <!-- testCases.users -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

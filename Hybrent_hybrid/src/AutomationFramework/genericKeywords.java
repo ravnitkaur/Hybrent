@@ -69,7 +69,7 @@ public class genericKeywords extends Common
 	public static String testStatus = "";
 	public static int testCaseDataRow;
 	public static int testLoadWaitTime = 40;
-	public static int elementLoadWaitTime = 40;
+	public static int elementLoadWaitTime = 30;
 	public static int implicitlyWaitTime = 40;
 	public static int pageLoadWaitTime = 40;
 	public static final ArrayList<String> testCaseNames = new ArrayList();
@@ -80,6 +80,7 @@ public class genericKeywords extends Common
 	{
 		try
 		{
+			//System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\Downloads\\Drivers\\chromedriver.exe");
 			System.setProperty("webdriver.chrome.driver", "D:\\Ravneet\\Ravneet\\Selenium\\Downloads\\Drivers\\chromedriver.exe");
 			Map<String, Object> prefs = new HashMap<String, Object>();
 			prefs.put("profile.default_content_setting_values.notifications", 2);
@@ -196,7 +197,7 @@ public class genericKeywords extends Common
 			}
 			else
 			{
-				ApplicationKeyword.testLogFail("verify if the " + locatorDescription + " element contains text '" + expectedText);
+				ApplicationKeyword.testLogFail("verify if the " + webElement.getText() + " element contains text '" + expectedText);
 			}
 		}
 		catch (Exception e)
@@ -714,12 +715,6 @@ public class genericKeywords extends Common
 			driver.manage().timeouts().implicitlyWait(implicitlyWaitTime, TimeUnit.SECONDS);
 		}
 	}
-
-
-
-
-
-
 
 
 	public static void verifyPageTitle(String partialTitle)
@@ -1918,13 +1913,12 @@ public class genericKeywords extends Common
 		boolean webElementStatus = false;
 		try {
 			driver.manage().timeouts().implicitlyWait(0L, TimeUnit.SECONDS);
-
 			for (int i = 1; i <= timeout; i++)
 			{
 				try
 				{
 					if (!webElementStatus)
-					{
+					{		
 						findWebElement(objLocator);
 						webElementStatus = true;
 						checkPageIsReady();
@@ -2321,6 +2315,25 @@ public class genericKeywords extends Common
 		PAGEUP, 
 		TAB;
 	}
+	
+	 public boolean isFileDownloaded(String downloadPath, String fileName) {
+		  File dir = new File(downloadPath);
+		  File[] dirContents = dir.listFiles();
+
+		  for (int i = 0; i < dirContents.length; i++) {
+		      if (dirContents[i].getName().equals(fileName)) {
+		          // File has been found, it can now be deleted:
+		          dirContents[i].delete();
+		          return true;
+		      }
+		          }
+		      return false;
+		  }
+	
+	
+	
+	
+	
 	public static void closeBrowser()
 	{
 		try

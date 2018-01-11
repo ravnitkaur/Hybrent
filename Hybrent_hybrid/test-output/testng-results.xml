@@ -1,25 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="4" total="5" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="39085" started-at="2018-01-04T14:12:33Z" finished-at="2018-01-04T14:13:13Z">
+  <suite name="Default suite" duration-ms="331697" started-at="2018-01-09T13:14:38Z" finished-at="2018-01-09T13:20:10Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="39085" started-at="2018-01-04T14:12:33Z" finished-at="2018-01-04T14:13:13Z">
-      <class name="testCases.requestService">
-        <test-method status="PASS" signature="startReport()[pri:0, instance:testCases.requestService@59494225]" name="startReport" is-config="true" duration-ms="509" started-at="2018-01-04T19:42:33Z" finished-at="2018-01-04T19:42:34Z">
+    <test name="Default test" duration-ms="331697" started-at="2018-01-09T13:14:38Z" finished-at="2018-01-09T13:20:10Z">
+      <class name="testCases.users">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:testCases.users@56ac3a89]" name="startReport" is-config="true" duration-ms="389" started-at="2018-01-09T18:44:38Z" finished-at="2018-01-09T18:44:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="Tc_SPO_03()[pri:0, instance:testCases.requestService@59494225]" name="Tc_SPO_03" duration-ms="38295" started-at="2018-01-04T19:42:34Z" finished-at="2018-01-04T19:43:12Z">
+        <test-method status="PASS" signature="Tc_Users_01()[pri:0, instance:testCases.users@56ac3a89]" name="Tc_Users_01" duration-ms="65860" started-at="2018-01-09T18:44:39Z" finished-at="2018-01-09T18:45:44Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Tc_SPO_03 -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:testCases.requestService@59494225]" name="endReport" is-config="true" duration-ms="266" started-at="2018-01-04T19:43:12Z" finished-at="2018-01-04T19:43:13Z">
+        </test-method> <!-- Tc_Users_01 -->
+        <test-method status="PASS" signature="Tc_Users_02()[pri:0, instance:testCases.users@56ac3a89]" name="Tc_Users_02" duration-ms="85497" started-at="2018-01-09T18:45:44Z" finished-at="2018-01-09T18:47:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tc_Users_02 -->
+        <test-method status="PASS" signature="Tc_Users_03_08()[pri:0, instance:testCases.users@56ac3a89]" name="Tc_Users_03_08" duration-ms="62082" started-at="2018-01-09T18:47:10Z" finished-at="2018-01-09T18:48:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tc_Users_03_08 -->
+        <test-method status="PASS" signature="Tc_Users_04_08()[pri:0, instance:testCases.users@56ac3a89]" name="Tc_Users_04_08" duration-ms="61772" started-at="2018-01-09T18:48:12Z" finished-at="2018-01-09T18:49:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tc_Users_04_08 -->
+        <test-method status="PASS" signature="Tc_Users_06()[pri:0, instance:testCases.users@56ac3a89]" name="Tc_Users_06" duration-ms="55616" started-at="2018-01-09T18:49:14Z" finished-at="2018-01-09T18:50:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tc_Users_06 -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:testCases.users@56ac3a89]" name="endReport" is-config="true" duration-ms="455" started-at="2018-01-09T18:50:09Z" finished-at="2018-01-09T18:50:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
-      </class> <!-- testCases.requestService -->
+      </class> <!-- testCases.users -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

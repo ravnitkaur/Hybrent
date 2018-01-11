@@ -16,6 +16,8 @@ public class OR {
 	public static String Login_Error = "Error#xpath=//h2[contains(text(),'Error?')]";
 	public static String Login_Validation = "ErrorValidation#xpath=//*[contains(text(),'Invalid user name or password.')]";
 	public static String Login_okay = "Errorok#xpath=//*[@class='confirm']";
+	
+	
 
 	// Shop
 	public static String Shop_Menu= "ShopMenu#xpath=//*[@href='#/shop']";
@@ -43,18 +45,17 @@ public class OR {
 	public static String Shop_SHopfor_FavOrderedradiobutton="FavOrderedradiobutton#xpath=//*[@id='searchShop']/div[4]";
 
 	public static String Shop_SHopfor_ResultGridTab="ResultGridTab#xpath=//*[@id='ng-view']/div/div[2]/div[3]/grid-layout/div[2]/div/div/div/div/table/thead/tr/th[7]/a";
-
+	
+	public static String Shop_SHopfor_LastorderedText="LastorderedText#xpath=//th[@class='ng-scope text-left'][2]/a";
+	public static String Shop_SHopfor_PoCountText="PoCountText#xpath=//th[@class='ng-scope text-right'][1]/a";
+	
+	
+	
 	public static String Shop_SHopfor_favtab="favtab#xpath=//i[@ng-if='isFavorite']";
 	public static String Shop_SHopfor_myInventoryFavTab="myInventoryFavTab#xpath=//i[@ng-if='!isFavorite']";  
 
 	public static String Shop_orgPage="orgPage#xpath=//*[@href='#/admin/organization']";
-	public static String Shop_FeaturesPage="FeaturesPage#xpath=//ul[@class='nav nav-tabs']/li[2]/a";  
-
-	//ORGsettings page
-
-	public static String orgsetting_crosswalk="crosswalk#xpath=//*[@id='use_cross_walk_as_item_identifier']";
-	public static String orgsetting_crosswalktext="crosswalktext#xpath=//input[@id='cross_walk_desc']";
-	//
+	public static String Shop_FeaturesPage="FeaturesPage#xpath=//ul[@class='nav nav-tabs']/li[2]/a";  	
 
 	public static String Shop_SHopfor_drilldownicon="drilldownicon#xpath=//button[@ng-readonly='moveingToPunchOutSite']";
 	public static String Shop_SHopfor_showTourText="showTourText#xpath=//ul[@ng-readonly='moveingToPunchOutSite']/li[1]/a";
@@ -83,6 +84,7 @@ public class OR {
 	public static String Shop_waitdropdown = "Shop_waitdropdown#xpath=//*[@role='menuitem']";
 	public static String Shop_orgpage = "Shop_Shop_orgpage#xpath=//*[@ng-href='#/admin/organization']";
 	public static String Shop_orgFeaturesPage = "Shop_orgFeaturesPage#xpath=//ul[@class='nav nav-tabs']";
+	public static String Shop_orgFeatures2Page = "Shop_orgFeaturesPage#xpath=//a[text()='Features']";
 	public static String Shop_crosswalktogglevalue ="Shop_crosswalktogglevalue#xpath=//*[@class='col-sm-8 user-action-switch']/div";
 	public static String Shop_crosswalktoggleON ="Shop_crosswalktoggleON#xpath=";
 	public static String Shop_dropDownText ="Shop_dropDownText#xpath=//*[@ng-show='settings.selectionLimit > 1']/a ";
@@ -121,7 +123,7 @@ public class OR {
 	public static String Shop_drilldownRemoveLayout = "drilldownRemoveLayout#xpath=//a[contains(text(),'---automation layout---')]/../i";
 	public static String Shop_drilldownLayouts = "drilldownLayouts#xpath=//a[text()='Layouts']";
 	public static String Shop_drilldownRemoveLayoutYes = "drilldownRemoveLayoutYes#xpath=//button[@class='confirm']";
-
+	public static String Shop_changeLayoutTextPopUP= "changeLayoutTextPopUP=#xpath=//*[@class='headtext']/span";
 	//*[@ng-repeat='item in items']
 
 	// Dashboard Page
@@ -310,7 +312,7 @@ public class OR {
 	public static String Request_drillDown = "Request_drillDown#xpath=//*[@class='pagehead']//*[@data-toggle='dropdown']";
 	public static String Request_createNewService = "createNewService#xpath=//*[contains(text(),'Add New Service')]";
 	public static String Request_createNewServicePopUpText = "createNewServicePopUpText#xpath=//div[@class='modal-header']/div/span";
-	public static String Request_ServiceLocationText="ServiceLocationText#xpath=//label[@for='shippingLocation']";
+	public static String Request_ServiceLocationText="ServiceLocationText#xpath=//*[@for='shippingLocation']/label";
 	public static String Request_ServiceDateText="ServiceDateText#xpath=//label[@for='txtExpectedDate']";
 	public static String Request_CalenderIcon="CalenderIcon#xpath=//*[@class='input-group-btn']//button[@class='btn btn-default btn-sm']";
 	public static String Request_CalenderDate="CalenderDate#xpath=//button[@id='datepicker-26501-1837-title']";
@@ -331,14 +333,14 @@ public class OR {
 	public static String Request_calenderIconAttribte="calenderIconAttribte#xpath=//button[@ng-click='open($event)']";
 	public static String Request_Duration="Duration#xpath=//*[@ng-show='item.is_service==1']/select";
 	
-//	ORDERS
+	//ORDERS
 	
-		public static String Orders_Link="OrdersLink#xpath=//*[@href='#/orders']";
-	   public static String Order_PO_Doc_Icon ="PO_Doc_Btn#xpath=//i[@class='ng-scope fa fa-paperclip']";
-	    public static String Order_PO_Doc_HeaderTxt ="PO_Doc_HeaderTxt#xpath=//*[@class='headtext ng-binding']";
-	    public static String Order_PO_Doc_UploadFile ="PO_Doc_UploadFileTxt#xpath=//label[contains(text(),'Upload File')]";
-	    public static String Order_PO_Doc_CloseBtn ="PO_Doc_CloseBtn#xpath=//*[text()='Close']";
-	    public static String Order_PO_Doc_UploadFiles ="PO_Doc_UploadFile#xpath=//*[@id='pic']";
+	public static String Orders_Link="OrdersLink#xpath=//*[@href='#/orders']";
+	public static String Order_PO_Doc_Icon ="PO_Doc_Btn#xpath=//i[@class='ng-scope fa fa-paperclip']";
+	public static String Order_PO_Doc_HeaderTxt ="PO_Doc_HeaderTxt#xpath=//*[@class='headtext ng-binding']";
+	public static String Order_PO_Doc_UploadFile ="PO_Doc_UploadFileTxt#xpath=//label[contains(text(),'Upload File')]";
+	public static String Order_PO_Doc_CloseBtn ="PO_Doc_CloseBtn#xpath=//*[text()='Close']";
+	public static String Order_PO_Doc_UploadFiles ="PO_Doc_UploadFile#xpath=//*[@id='pic']";
 	    
 	    public static String Order_PO_StatusDropdown_Cancelled ="Cancelled#xpath=//*[text()='Cancelled']";
 	    public static String Order_PO_StatusDropdown_On_Hold ="On_Hold#xpath=//*[text()='On-Hold']";
@@ -362,11 +364,166 @@ public class OR {
 	    
 	    public static String Assending ="Assending#xpath=//*[@class='fa fa-caret-up']";
 	    public static String Descending ="Descending#xpath=//*[@class='fa fa-caret-down']";
-	//INVOICE 
+	    public static String conditionForNoOrder ="conditionForNoOrder#xpath=//div[@class='panel-body']/tbody/tr/td";
+	    public static String Order_PO_StatusDropdown_PartialReceived ="PartialReceived#xpath=//*[text()='Partial Received']";
+	    public static String Order_PO_StatusDropdown_Completed ="Completed#xpath=//*[text()='Completed']";
+	    public static String Order_FacilityDropDown ="FacilityDropDown#xpath=//*[@id='facility']";
+	    
+	    
+	    
+	    //INVOICE 
 	
 	public static String Request_InvoicePageLink="InvoicePageLink#xpath=//*[@href='#/invoice']";
+	public static String Invoice_InvoiceDesc="InvoiceDesc#xpath=//input[@id='txtInvNo']";
+	public static String Invoice_InvoicePONum="Invoice_InvoicePONum#xpath=//div[@class='pagehead']/span";
+	public static String Invoice_AddItemInInvoice="AddItemInInvoice#xpath=//select[@name='POItems']";
+	public static String Invoice_AddItemButton="AddItemButton#xpath=//button[@ng-click='AddItemToInvoice()']";
+	public static String Invoice_ItemQtyField="ItemQtyField#xpath=//input[id='ItemQty']";
+	public static String Invoice_SaveButton="SaveButton#xpath=//button[@ng-click='saveInvoice()']";
+	public static String Invoice_ConfirmButton="ConfirmButton#xpath=//button[@class='confirm']";
+	public static String Invoice_DocPopUPText="DocPopUPText#xpath=//div[@class='modal-header']/div[@class='headtext ng-binding']";
+	public static String Invoice_DocButton="DocButton#xpath=//button[@ng-click='attachFiles()']";
+	public static String Invoice_UploadButton="UploadButton#xpath=//*[@id='pic']../label";
+	public static String Invoice_UploadDocName="UploadDocName#xpath=//div[@class='col-sm-18']/div/a";
+	//public static String Invoice_closeButton="closeButton#xpath=//button[text()='cancel()']";
+	public static String Invoice_closeButton="closeButton#xpath=//*[@class='fa fa-2x fa-times']";
+	public static String Invoice_SearchInInvoiceTextBox="SearchInInvoiceTextBox#xpath=//*[@id='search']";
+	public static String Invoice_SearchButton="SearchButton#xpath=//button[@type='submit']";
+	public static String Invoice_SelectPending="SelectPending#xpath=//div[@class='input-sm ui-select-container ui-select-bootstrap dropdown ng-not-empty ng-valid ng-touched ng-dirty ng-valid-parse']";
+	public static String Invoice_SelectFirstInvoice="SelectFirstInvoice#xpath=//*[@class='table']/tbody/tr[1]/td[1]/a";
+	public static String Invoice_SelectFirstPO="SelectFirstPO#xpath=//*[@class='table']/tbody/tr[1]/td[2]";
+	public static String Invoice_SelectAllUserDropDown="SelectAllUserDropDown#xpath=//input[@type='search']";
+	public static String Invoice_SelectAllUser="SelectAllUser#xpath=//*[text()='All']";
+	public static String Invoice_PageHeadText="PageHeadText#xpath=//div[@class='pagehead']";
+	public static String Invoice_PageHeadTextIncludingPONum="PageHeadTextIncludingPONum#xpath=//div[@class='pagehead']/span";
+	public static String Invoice_clickOnUploadFIle="clickOnUploadFIle#xpath=//*[@type='file']";
+	public static String Invoice_PONUmInHeader="clickOnUploadFIle#xpath=//*[@class='pagehead']/span";
+	public static String Invoice_SelectFirstPONUmFromInvoicePage="SelectFirstPONUmFromInvoicePage#xpath=//*[@class='table']/tbody/tr[1]/td[2]";
+	public static String Invoice_SelectFirstInvoiceFromInvoicePage="SelectFirstInvoiceFromInvoicePage#xpath=//*[@class='table']/tbody/tr[1]/td[1]/a";
+	public static String Invoice_DownoadPDF="Invoice_DownoadPDF#xpath=(//*[@class='fa fa-download'])[1]";
+	public static String Invoice_PrintPDF="PrintPDF#xpath=(//*[@ng-click='openPDF()'])[1]";
+	public static String Invoice_PrintPReviewWindow="PrintPReviewWindow#xpath=//*[contains(text(),'Print Invoice')]";
+	public static String Invoice_vendorDropDownLabels="vendorDropDownLabels#xpath=//*[text()='Vendor:']";
+	public static String Invoice_vendorDropDowns="vendorDropDown#xpath=//*[@name='vendor_name']";
+	public static String Invoice_statusDropDowns="statusDropDown#xpath=//*[@name='status']";
+	public static String Invoice_statusDropDownLabel="statusDropDownLabel#xpath=//label[@for='ddlStatus']";
+	public static String Invoice_SearchBYDueDateDropDowns="statusDropDown#xpath=//*[@name='dateRange']";
+	public static String Invoice_SearchBYDueDateLabel="statusDropDownLabel#xpath=//*[text()='Search by Due-Date']";
+	
+	public static String Invoice_FacilityLabel="facilityLabel#xpath=//*[text()='Facility']";
+	public static String Invoice_facilityDateDropDowns="facilityDateDropDowns#xpath=//*[@name='facility']";
+	public static String Invoice_departmentLabel="departmentLabel#xpath=//label[@for='depts']";
+	public static String Invoice_departmentDropDown="departmentDropDown#xpath=//*[@name='depts']";
+	public static String Invoice_OrderedByLabel="OrderedByLabel#xpath=//*[text()='Ordered By:']";
+	public static String Invoice_OrderedByDropDown="OrderedByDropDown#xpath=//*[@name='ddlOrderby']";
+	public static String Invoice_SentToAccounting="SentToAccounting#xpath=//button[contains(text()='SentToAccounting')]";
+	public static String Invoice_Delete="Delete#xpath=(//i[@class='glyphicon glyphicon-trash text-danger action-button'])[1]";
+	public static String Invoice_confirmButton="Invoice_confirmButton#xpath=//button[@class='confirm']";
+	public static String Invoice_NoInvoiceFoundMessage="NoInvoiceFoundMessage#xpath=//*[text()='No Invoice Found']";
 	
 	
+	//SHIPMENTS
+	public static String Shipment_PageLink="PageLink#xpath=//*[@href='#/orders/shipments']";
+	public static String Shipment_FirstShipmentNum="FirstShipmentNum#xpath=//*[@class='table table-striped']/tbody/tr[1]/td[1]/a";
+	public static String Shipment_ShipmentPONum="ShipmentPONum#xpath=//*[@class='table table-striped']/tbody/tr[1]/td[2]";
+	public static String Shipment_TrackingNum="TrackingNum#xpath=//*[@class='table table-striped']/tbody/tr[1]/td[6]/a";
+	public static String Shipment_SearchTextBox="SearchTextBox#xpath=//*[@id='shipment-search']";
+	public static String Shipment_SubmitButton="SubmitButton#xpath=//button[text()='Search']";
+	//public static String Shipment_ShipmentDetailPAge="ShipmentDetailPage#xpath=//*[contains(text(),'Shipment#')]";
+	public static String Shipment_ShipmentDetailPAge="ShipmentDetailPAge#xpath=//*[@class='pagehead ng-binding']";
+	public static String Shipment_StatusDropDown="StatusDropDown#xpath=//*[@id='sel1']";
+	
+	public static String Shipment_ReceiveButtonText="ReceiveButtonText#xpath=//div[@class='pull-right']/button[3]";
+	public static String Shipment_CloseButton="CloseButton#xpath=//div[@class='pull-right']/button[4]";
+
+	//ORGSettings page
+
+	public static String orgsetting_crosswalk="crosswalk#xpath=//*[@id='use_cross_walk_as_item_identifier']";
+	public static String orgsetting_crosswalktext="crosswalktext#xpath=//input[@id='cross_walk_desc']";
+	public static String orgsetting_IntactSetting="IntactSetting#xpath=//input[@id='intacct_integration']";
+	public static String orgsetting_QuickBookIntegrationSetting="QuickBookIntegrationSetting#xpath=//input[@id='quick_book_integration']";		
+	public static String orgsetting_AdminMenuText="AdminMenuText#xpath=//admin-menu//li[text()='Admin']";			
+	public static String orgsetting_orgPageTextt="orgPageTextt#xpath=//div[@class='pagehead']";		
+	public static String orgsetting_orgFeaturesPageText="orgFeaturesPage#xpath=//*[@class='sub-header-block' and text()='Inventory']";
+	public static String orgsetting_orgBudgetPage="orgBudgetPage#xpath=//a[@href='#/admin/organization-budget']";
+	public static String orgsetting_orgBudgetPageText="orgBudgetPageText#xpath=//div[@class='pagehead']";
+	
+	//Users Page
+	public static String Users_page="Users_page#xpath=//*[@href='#/admin/users']";
+	public static String Users_SearchByText="SearchByText#xpath=//*[@for='search-search']";
+	public static String Users_SearchTextBox="SearchTextBox#xpath=//*[@class='form-group']//*[@id='search-search']";
+	public static String Users_FacilityText="FacilityText#xpath=//*[@for='search-facility']";
+	public static String Users_FacilityDropDown="FacilityDropDown#xpath=//*[@id='search-facility']";
+	public static String Users_StatusText="Status#xpath=//*[@for='search-status']";
+	public static String Users_StatusDropDown="StatusDropDown#xpath=//*[@id='search-status']";
+	public static String Users_SearchButton="SearchButton#xpath=//button[@type='submit']";
+	public static String Users_FirstUserName="FirstUserName#xpath=//*[@id='isotopeContainer']//*[@class='user-detail-container']//*[@class='ng-binding'][1]";
+	public static String Users_FirstUserEmail="FirstUserEmail#xpath=//*[@id='isotopeContainer']//*[@class='user-detail-container']//*[@class='ng-binding'][3]";
+	public static String Users_EditFirstUser="EditFirstUser#xpath=(//*[@ng-click='editUser(adminUserData.id)'])[1]";
+	public static String Users_EditUserTextPopUp="EditUserTextPopUp#xpath=//*[contains,(text(), 'Edit User')]";
+	public static String Users_NameEditBox="NameEditBox#xpath=//*[@id='name']";
+	public static String Users_EmployeeEditBox="NameEditBox#xpath=//*[@id='employee_no']";
+	public static String Users_NickNameEditBox="NickNameEditBox#xpath=//*[@id='nickname']";
+	public static String Users_EmailEditBox="EmailEditBox#xpath=//*[@id='email']";
+	public static String Users_PasswordEditBox="PasswordEditBox#xpath=//*[@id='password']";
+	public static String Users_ConfirmPasswordEditBox="ConfirmPasswordEditBox#xpath=//*[@id='con_password']";
+	public static String Users_ClosePopup="ClosePopup#xpath=//i[@class='fa fa-2x fa-times']";
+	public static String Users_AddNewUser="AddNewUser#xpath=//button[@ng-click='createUser()']";
+	public static String Users_AddUserPopupText="AddUserPopupText#xpath=//*[@class='modal-content']//span[2]";
+	public static String Users_EditUserButton="EditUserButton#xpath=//button[@ng-click='editUser(adminUserData.id)']";
+	public static String Users_EditUserPopupText="EditUserPopupText#xpath=//*[@class='modal-content']//span[1]";
+	public static String Users_ChangePasswordButton="ChangePasswordButton#xpath=(//button[@ng-click='changePassword(adminUserData.id)'])[1]";
+	public static String Users_ChangePasswordPopUpText="ChangePasswordPopUpText#xpath=//*[@class='headtext']";
+	public static String Users_SaveButton="SaveButton#xpath=//*[@class='modal-footer']//button[@ng-click='saveUserFn(user)']";
+	public static String Users_FacilityDropDownAddUSer="FacilityDropDownAddUSer#xpath=//*[@id='facility']";
+	public static String Users_DepartmentDropDownAddUSer="FacilityDropDownAddUSer#xpath=//*[@id='department']";
+	public static String Users_WaitDepartmentDropDownAddUSer="WaitFacilityDropDownAddUSer#xpath=//*[@id='department']/option";
+	public static String Users_InventoryDropDownAddUSer="InventoryDropDownAddUSer#xpath=//*[@id='inventory']";
+	public static String Users_WaitInventoryDropDownAddUSer="WaitInventoryDropDownAddUSer#xpath=//*[@id='inventory']";
+	public static String Users_vendorAccessTab="vendorAccessTab#xpath=//li[@header='Vendor Access']/a";
+	public static String Users_SelectVendorsDropDown="SelectVendorsDropDown#xpath=//*[@for='itemslist']//i[@class='fa fa-ellipsis-v autocomplete-show'";
+	public static String Users_SelectAllVendors="SelectAllVendors#xpath=//button[contains(text(), 'Select all') and contains(@ng-click='selectAllItems()')]";
+
+	
+	//Facilities
+	
+	public static String Facilty_FacilityLink="FacilityLink#xpath=//*[@href='#/admin/facility']";	
+	public static String Facilty_WaitforTableElem="WaitforTableElem#xpath=//*[@id='reqListing']";
+	public static String Facilty_firstFacility="firstFacility#xpath=//*[@id='reqListing']//td[@class='ng-binding'][1]";
+	public static String Facilty_SearchBox="SearchBox#xpath=//*[@id='search-search']";
+	public static String Facilty_SearchButton="SearchButton#xpath=//button[@type='submit']";
+	public static String Facilty_AddFacilityButton="AddFacilityButton#xpath=//button[@ng-click='createFacility()']";
+	public static String Facilty_AddFacilityText="AddFacilityText#xpath=//*[@class='modal-header']//span[2]";
+	public static String Facilty_EditFacility="EditFacility#xpath=//i[@class='fa fa-edit']";
+	public static String Facilty_EditFacilityText="AddFacilityText#xpath=//*[@class='modal-header']//span[1]";
+	public static String Facilty_firstDepartmentName="firstDepartmentName#xpath=(//ul[@class='facility_department_sublist']//li[@class='facility_department_sublistitem ng-binding ng-scope'])[1]";
+	public static String Facilty_firstdrillDown="firstdrillDown#xpath=(//button[@class='btn btn-sm btn-default rounded-button ng-scope'])[1]";
+	//Receive Module	
+	public static String Receive_statusDropdownOptions="statusDropdownOptions#xpath=//*[@id='status']/ul/li//span[@class='ui-select-choices-row-inner']/span";
+	public static String Receive_pageLink="pageLink#xpath=//*[@href='#/orders/receive']";
+	public static String Receive_wait="wait#xpath=//*[@class='table']/thead/tr";
+	public static String Receive_statusDropdown="statusDropdown#xpath=//*[@id='status']";
+	public static String Receive_vendorDropdown="vendorDropdown#xpath=//*[@id='vendor']";
+	public static String Receive_typeDropdown="typeDropdown#xpath=//*[@id='type']";
+	public static String Receive_facilityDropdown="typeDropdown#xpath=//*[@id='facility']";
+	public static String Receive_departmentDropdown="typeDropdown#xpath=//*[@id='depts']";
+	public static String Receive_createdByDropdown="typeDropdown#xpath=//*[@id='creater']";
+	public static String Receive_NotesLink="NotesLink#xpath=(//*[@class='pull-right dropdown']/a[@ng-click='openPONote(order)'])[1]";
+	public static String Receive_NotesLinkText="NotesLinkText#xpath=(//*[@class='modal-header']//span[@class='ng-binding'])[1]";
+	public static String Receive_AddNewNotesLink="AddNewNotesLink#xpath=//button[@ng-click='createNewNoteFn();']";
+	public static String Receive_DocsLink="DocsLink#xpath=(//*[@class='pull-right dropdown']/a[@ng-click='attachFiles(order)'])[1]";
+	public static String Receive_DocsLinkText="DocsLinkText#xpath=(//*[@class='modal-header']//*[@class='headtext ng-binding'])[1]";
+	public static String Receive_DrillDownIcon="DrillDownIcon#xpath=(//*[@class='fa fa-chevron-down'])[1]";
+	public static String Receive_PrintPOLink="PrintPOLink#xpath=(//*[@class='dropdown-menu']//*[@ng-click='openPDF()'])[1]";
+	public static String Receive_PrintPOText="PrintPOText#xpath=(//*[@class='modal-header']//*[@class='ng-binding'])[1]";
+	public static String Receive_InvoiceForText="InvoiceForText#xpath=(//*[@class='pagehead'])[1]";
+	
+	public static String Receive_AllInvoiceLink="AllInvoiceLink#xpath=(//a[text()='All Invoices'])[1]";
+	public static String Receive_firstPONum="firstPONum#xpath=(//*[@class='table']//a[@class='ng-binding'])[1]";
+	public static String Receive_PrintItems="PrintItems#xpath=(//*[@ng-click='downloadPdf(order)']";
+	public static String Receive_PrintitemsText="PrintitemsText#xpath=(*//[@class='headtext']/span[1])";
+
+
 }
 
 

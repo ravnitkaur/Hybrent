@@ -22,12 +22,17 @@ public class cartPage extends ApplicationKeyword{
 	public static String URL = "https://qa4.test.hybrent.com/b/#/login/";
 
 
-	public static String ItemDescription;
-	public static String ItemMfrNumber;
-	public static String ItemTestID;
-	public static String SkuName;
+//	public static String ItemDescription;
+//	public static String ItemMfrNumber;
+//	public static String ItemTestID;
+//	public static String SkuName;
 	public static String facility_Name;
 	public static String vendor_Name;
+	
+	public static String ItemDescription = "ItemDesTest001";
+	public static String ItemMfrNumber = "ItemMfrNumber001";
+	public static String ItemTestID = "ItemTestID001";
+	public static String SkuName = "sku001";
 
 
 	@BeforeTest
@@ -48,11 +53,8 @@ public class cartPage extends ApplicationKeyword{
 			testLogFail("unable to generate the pass report "+e.toString());   
 		}
 	}
-
 	
-	
-	
-	@Test
+	@Test(priority=1)
 	public void Tc_Cart_1_2()
 	{
 		testStarts("Tc_Cart_1 and Tc_Cart_2()" , "Verify that “Select Facility” popup appears when user clicks on facility name with “Cart for” label."
@@ -112,7 +114,7 @@ public class cartPage extends ApplicationKeyword{
 		closeBrowser();
 	}
 	
-	@Test
+	@Test(priority=2)
 	public void Tc_Cart_03() throws InterruptedException
 	{
 		testStarts("Tc_Cart_03" ," Verify that user can search/scan with “Item Name, SKU, MFR” in the Add Item search field..");
@@ -162,17 +164,16 @@ public class cartPage extends ApplicationKeyword{
 		{
 			testLogFail("Item is not searched with " + ItemMfrNumber);			
 		}	
-		//clickOn(OR.MyCart_addItemInCart);
 		closeBrowser();		
 	}
 
-	@Test
+	@Test(priority=3)
 	public void Tc_Cart_05() throws InterruptedException
 	{
-		testStarts("Tc_Cart_05" ," Verify that user can search/scan with “Item Name, SKU, MFR” in the Add Item search field..");
+		testStarts("Tc_Cart_05" ," Verify that user can change the quantity of item by clicking (+) and (-) button respectively or by entering the value and pressing tick or cancel button..");
 		openBrowser(URL);
 		LoginPage.login(UserName, Password);
-		addNewItem();
+		//addNewItem();
 		clickOn(OR.MyCart);
 		
 		waitForElementToDisplay(OR.MyCart_drillDown, 10);	
@@ -228,13 +229,13 @@ public class cartPage extends ApplicationKeyword{
 		closeBrowser();
 	}
 	
-	@Test
+	@Test(priority=4)
 	public void Tc_Cart_06()
 	{
 		testStarts("Tc_Cart_06" ,"Verify that user is able to add “Special Instructions” for each vendor.");
 		openBrowser(URL);
 		LoginPage.login(UserName, Password);
-		addNewItem();
+		//addNewItem();
 		clickOn(OR.MyCart);
 		checkIfCartIsEmpty();
 		//typeIn(OR.MyCart_searchInCart,"ItemDesc");
@@ -266,13 +267,13 @@ public class cartPage extends ApplicationKeyword{
 		
 	}
 	
-	@Test
+	@Test(priority=5)
 	public void Tc_Cart_07()
 	{
 		testStarts("Tc_Cart_07" ,"Verify that user can manually add PO number by selecting “Use PO#” checkbox.");
 		openBrowser(URL);
 		LoginPage.login(UserName, Password);
-		addNewItem();
+		//addNewItem();
 		clickOn(OR.MyCart);
 		
 		//waitForElementToDisplay(OR.MyCart_drillDown, 10);		
@@ -304,13 +305,13 @@ public class cartPage extends ApplicationKeyword{
 	 closeBrowser();	
 	}
 	
-	@Test
+	@Test(priority=6)
 	public void Tc_Cart_08()
 	{
 		testStarts("Tc_Cart_08" ,"Verify that vendor gets removed from cart when user clicks on “Remove Vendor from cart” option in dropdown with vendor name.");
 		openBrowser(URL);
 		LoginPage.login(UserName, Password);
-		addNewItem();
+		//addNewItem();
 		clickOn(OR.MyCart);
 		checkIfCartIsEmpty();
 		typeIn(OR.MyCart_searchInCart,ItemDescription);
@@ -323,13 +324,13 @@ public class cartPage extends ApplicationKeyword{
 		closeBrowser();
 		
 	}
-	@Test
+	@Test(priority=7)
 	public void Tc_Cart_09()
 	{
 		testStarts("Tc_Cart_09" ," “Verify that users gets redirected to “Vendors Account Setup” on clicking “ Account Setup. ");
 		openBrowser(URL);
 		LoginPage.login(UserName, Password);
-		addNewItem();
+		//addNewItem();
 		clickOn(OR.MyCart);
 		checkIfCartIsEmpty();
 		//typeIn(OR.MyCart_searchInCart, "ItemDesc");
@@ -342,13 +343,13 @@ public class cartPage extends ApplicationKeyword{
 		closeBrowser();		
 	}
 	
-	@Test
+	@Test(priority=8)
 	public void Tc_Cart_10()
 	{
 		testStarts("Tc_Cart_10" ,"Verify that “Departments” pop up appears when user clicks on Attach  department hyperlink.");
 		openBrowser(URL);
 		LoginPage.login(UserName, Password);
-		addNewItem();
+		//addNewItem();
 		clickOn(OR.MyCart);
 		checkIfCartIsEmpty();
 		//typeIn(OR.MyCart_searchInCart,"ItemDesc");
@@ -357,25 +358,15 @@ public class cartPage extends ApplicationKeyword{
 		clickOn(OR.MyCart_AddDepartmenthyperLink);
 		waitForElementToDisplay(OR.MyCart_AddDepartmentText, 10);
 		verifyElementText(OR.MyCart_AddDepartmentText, "Departments");
-//		String departmentText=getText(OR.MyCart_AddDepartmentText);
-//		System.out.println(departmentText);
-//		if(departmentText.equals("Departments"))
-//		{
-//			testLogPass("Department Pop up is shown");			
-//		}
-//		else
-//		{
-//			testLogFail("Department Pop up is not shown");			
-//		}
 		closeBrowser();	
 	}
-	@Test
+	@Test(priority=9)
 	public void Tc_Cart_12()
 	{
-		testStarts("Tc_Cart_12" ,"Verify that “Departments” pop up appears when user clicks on Attach  department hyperlink.");
+		testStarts("Tc_Cart_12" ,"Verify that “Physicians” pop up appears when user clicks on “Attach Physician” hyperlink.");
 		openBrowser(URL);
 		LoginPage.login(UserName, Password);
-		addNewItem();
+		//addNewItem();
 		clickOn(OR.MyCart);
 		checkIfCartIsEmpty();
 		//typeIn(OR.MyCart_searchInCart,"ItemDesc");
@@ -388,13 +379,13 @@ public class cartPage extends ApplicationKeyword{
 	
 	}
 	
-	@Test
+	@Test(priority=10)
 	public void Tc_Cart_11()
 	{
-		testStarts("Tc_Cart_11" ,"Verify that “Departments” pop up appears when user clicks on Attach  department hyperlink.");
+		testStarts("Tc_Cart_11" ,"Verify that Print window appears when user clicks print items.");
 		openBrowser(URL);
 		LoginPage.login(UserName, Password);
-		addNewItem();
+		//addNewItem();
 		clickOn(OR.MyCart);
 		checkIfCartIsEmpty();
 		//typeIn(OR.MyCart_searchInCart,"ItemDesc");
@@ -410,13 +401,13 @@ public class cartPage extends ApplicationKeyword{
 	
 
 	
-	@Test
+	@Test(priority=11)
 	public void Tc_Cart_13()
 	{
 		testStarts("Tc_Cart_13" ,"Verify that when user clicks on “Clear Current cart”, items added in current facility gets cleared.");
 		openBrowser(URL);
 		LoginPage.login(UserName, Password);
-		addNewItem();
+		//addNewItem();
 		clickOn(OR.MyCart);
 		checkIfCartIsEmpty();
 		//typeIn(OR.MyCart_searchInCart,"ItemDesc");
@@ -432,13 +423,13 @@ public class cartPage extends ApplicationKeyword{
 	
 	}
 	
-	@Test
+	@Test(priority=12)
 	public void Tc_Cart_14()
 	{
 		testStarts("Tc_Cart_14" ,"Verify that when user clicks on “Clear all Cart”, items added in all facilities gets cleared..");
 		openBrowser(URL);
 		LoginPage.login(UserName, Password);
-		addNewItem();
+		//addNewItem();
 		clickOn(OR.Shop_Menu);
 		String facility_Name=getText(OR.Shop_SHopfor_getfacilityName);
 		System.out.println(facility_Name);
@@ -510,13 +501,13 @@ public class cartPage extends ApplicationKeyword{
 	
 	
 
-	@Test
+	@Test(priority=13)
 	public void Tc_Cart_15()
 	{
 		testStarts("Tc_Cart_15" ,"Verify that show tour pops appear when user clicks on show tour option in dropdown next to refresh button.");
 		openBrowser(URL);
 		LoginPage.login(UserName, Password);
-		addNewItem();
+		//addNewItem();
 		clickOn(OR.MyCart);
 		if(!boolcheckCartIsEmpty())
 		{
@@ -528,8 +519,8 @@ public class cartPage extends ApplicationKeyword{
 		}
 		else
 		{
-		typeIn(OR.MyCart_searchInCart,"ItemDesc");
 		//typeIn(OR.MyCart_searchInCart,"ItemDesc");
+		typeIn(OR.MyCart_searchInCart,ItemDescription);
 		clickOn(OR.MyCart_addItemInCart);
 		clickOn(OR.MyCart_drillDown);
 		clickOn(OR.MyCart_showTourButton);
@@ -605,11 +596,14 @@ public class cartPage extends ApplicationKeyword{
 	{
 	waitForElementToDisplay(OR.Shop_Menu, 60);
 	//adding new item
-	ItemDescription = "ItemDes"+ApplicationKeyword.randomAlphaNumeric(4);
-	ItemMfrNumber = "ItemMfrNumber"+ApplicationKeyword.randomAlphaNumeric(4);
-	ItemTestID = "ItemTestID"+ApplicationKeyword.randomAlphaNumeric(4);
-	SkuName = "sku"+ApplicationKeyword.randomAlphaNumeric(4);
-
+//	ItemDescription = "ItemDes"+ApplicationKeyword.randomAlphaNumeric(4);
+//	ItemMfrNumber = "ItemMfrNumber"+ApplicationKeyword.randomAlphaNumeric(4);
+//	ItemTestID = "ItemTestID"+ApplicationKeyword.randomAlphaNumeric(4);
+//	SkuName = "sku"+ApplicationKeyword.randomAlphaNumeric(4);
+	ItemDescription = "ItemDesTest001";
+	ItemMfrNumber = "ItemMfrNumber001";
+	ItemTestID = "ItemTestID001";
+	SkuName = "sku001";
 
 	//  openBrowser(URL);
 	//  LoginPage.login(UserName, Password);
